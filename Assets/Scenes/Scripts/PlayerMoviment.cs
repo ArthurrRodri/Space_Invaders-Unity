@@ -11,7 +11,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         var horizontal = Input.GetAxisRaw("Horizontal");
         var movement = new Vector3(horizontal, 0f, 0f).normalized;
-
+        
         if (movement != Vector3.zero)
         {
             _rb.MovePosition(transform.position + movement * speed * Time.deltaTime);
